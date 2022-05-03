@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ShoppingItem } from './shopping-item';
 import { Observable } from 'rxjs';
-//import 'rxjs/add/operator/map';
-//import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
