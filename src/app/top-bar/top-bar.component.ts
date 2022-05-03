@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ShoppingListService } from '../shopping-list.service';
 
 @Component({
   selector: 'app-top-bar',
@@ -6,7 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./top-bar.component.css']
 })
 export class TopBarComponent {
+  constructor(private shoppingService: ShoppingListService) { }
 
+  sendEmail() {
+    this.shoppingService.sendList().subscribe(
+      response => console.log(response),
+      err => console.error(err)
+    );
+  }
 }
 
 

@@ -1,0 +1,8 @@
+<br/>
+<div class="list-item" *ngFor="let list of shoppingItems$ | async">
+    <span>{{ list.name }}</span>
+</div>
+
+<button [disabled]="shoppingItems$ == undefined || shoppingItems$.pipe.length>0" (click)="clearList()">Clear List</button>
+
+
